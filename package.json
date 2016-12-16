@@ -1,0 +1,11 @@
+{
+  "name": "simple-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "simple-plugin",
+    "platforms": [
+      "android"
+    ]
+  }
+}

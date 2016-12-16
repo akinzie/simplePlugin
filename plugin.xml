@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="simple-plugin"
+    version="1.0.0">
+
+	<name>SimplePlugin</name>
+
+    <engines>
+      <engine name="cordova" version="&gt;=6.4.0" />
+      <engine name="cordova-android" version="&gt;=5.2.2" />
+    </engines>
+
+    <js-module name="Simple" src="www/simple.js">
+		<clobbers target="simple"/>
+	</js-module>
+    
+	<platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="simple">
+                <param name="android-package" value="com.example.simple.SimplePlugin"/>
+            </feature>
+        </config-file>
+		<source-file src="src/android/SimplePlugin.java" target-dir="src/com/example/simple" />
+	</platform>
+</plugin>
+
